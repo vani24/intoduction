@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="Introduction">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../../Vani/eclipse-jee-oxygen-1-win32-x86_64/eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="TestNG.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}plugins/org.testng_6.13.1.r201712040515.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/com.beust.jcommander_1.72.0.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.apache-extras.beanshell.bsh_2.0.0.b6.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.yaml.snakeyaml_1.17.0.jar"/>
+    </path>
+    <path id="Introduction.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="../../../../Vani/selenium-java-3.6.0/client-combined-3.6.0.jar"/>
+        <pathelement location="../../../../Vani/selenium-java-3.6.0/client-combined-3.6.0-sources.jar"/>
+        <pathelement location="../../../../Vani/selenium-java-3.6.0/libs/byte-buddy-1.7.5.jar"/>
+        <pathelement location="../../../../Vani/selenium-java-3.6.0/libs/commons-codec-1.10.jar"/>
+        <pathelement location="../../../../Vani/selenium-java-3.6.0/libs/commons-exec-1.3.jar"/>
+        <pathelement location="../../../../Vani/selenium-java-3.6.0/libs/commons-logging-1.2.jar"/>
+        <pathelement location="../../../../Vani/selenium-java-3.6.0/libs/gson-2.8.0.jar"/>
+        <pathelement location="../../../../Vani/selenium-java-3.6.0/libs/guava-23.0.jar"/>
+        <pathelement location="../../../../Vani/selenium-java-3.6.0/libs/httpclient-4.5.3.jar"/>
+        <pathelement location="../../../../Vani/selenium-java-3.6.0/libs/httpcore-4.4.6.jar"/>
+        <pathelement location="../../../../Vani/selenium-java-3.6.0/libs/jna-4.1.0.jar"/>
+        <pathelement location="../../../../Vani/selenium-java-3.6.0/libs/jna-platform-4.1.0.jar"/>
+        <path refid="TestNG.libraryclasspath"/>
+        <pathelement location="../../../../Vani/poi-3.9.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="Introduction.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="AmstrongNum">
+        <java classname="Training.AmstrongNum" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="AreaOfCircleRect">
+        <java classname="Training.AreaOfCircleRect" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="ArrayListEquals">
+        <java classname="Training.ArrayListEquals" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="ArraySorting">
+        <java classname="javahackathon.ArraySorting" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="ArraysToList">
+        <java classname="Training.ArraysToList" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="AscendingSelectionSort">
+        <java classname="javahackathon.AscendingSelectionSort" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="BinarySearch (1)">
+        <java classname="javahackathon.BinarySearch" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="BinarySearch">
+        <java classname="Training.BinarySearch" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="BooleanVariable">
+        <java classname="javahackathon.BooleanVariable" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="BrowserInvocation">
+        <java classname="sample.BrowserInvocation" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="BubbleSort">
+        <java classname="Training.BubbleSort" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="chromebrowser">
+        <java classname="sample.chromebrowser" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="CircularQueue">
+        <java classname="Training.CircularQueue" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="CommonEleInList">
+        <java classname="Training.CommonEleInList" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="CompareXLFiles">
+        <java classname="poiReadWrite.CompareXLFiles" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="CountIntUpLowChar">
+        <java classname="javahackathon.CountIntUpLowChar" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="DistinctAndDupicateEleArr">
+        <java classname="javahackathon.DistinctAndDupicateEleArr" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="DistinctDuplicateElem">
+        <java classname="Training.DistinctDuplicateElem" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="DropDown">
+        <java classname="sample.DropDown" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="DupicateCharsInString">
+        <java classname="javahackathon.DupicateCharsInString" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="DupicateEleInArray">
+        <java classname="Training.DupicateEleInArray" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="DupicateNumInArray">
+        <java classname="Training.DupicateNumInArray" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="DuplicateEleInArray">
+        <java classname="sample.DuplicateEleInArray" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="EachCharCountInString">
+        <java classname="javahackathon.EachCharCountInString" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="FactNonRecurceive">
+        <java classname="javahackathon.FactNonRecurceive" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="FactNumber">
+        <java classname="Training.FactNumber" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="Factorial (1)">
+        <java classname="sample.Factorial" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="Factorial">
+        <java classname="Training.Factorial" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="FactUsingRecursion">
+        <java classname="javahackathon.FactUsingRecursion" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="Fibonacci">
+        <java classname="Training.Fibonacci" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="FrequencyOfChar">
+        <java classname="Training.FrequencyOfChar" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="FrontEvenNumber">
+        <java classname="Training.FrontEvenNumber" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="HashSetSorting">
+        <java classname="Training.HashSetSorting" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="helloWorldJava">
+        <java classname="sample.helloWorldJava" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="InitialDriver">
+        <java classname="selenium.InitialDriver" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="InputStringOrIntOrBool">
+        <java classname="javahackathon.InputStringOrIntOrBool" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="InsertionSort">
+        <java classname="Training.InsertionSort" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="IntegerToString">
+        <java classname="javahackathon.IntegerToString" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="LargestOfThree">
+        <java classname="Training.LargestOfThree" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="LinerSearch">
+        <java classname="Training.LinerSearch" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="ListToArrays">
+        <java classname="Training.ListToArrays" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="LongestPalindrom">
+        <java classname="javahackathon.LongestPalindrom" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="MergeSort (1)">
+        <java classname="javahackathon.MergeSort" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="MergeSort">
+        <java classname="Training.MergeSort" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="MergeSortedArray">
+        <java classname="javahackathon.MergeSortedArray" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="MyArrayListSort">
+        <java classname="Training.MyArrayListSort" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="MyQueue">
+        <java classname="Training.MyQueue" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="MyStack">
+        <java classname="Training.MyStack" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="OddEven">
+        <java classname="Training.OddEven" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="OddNumbers">
+        <java classname="Training.OddNumbers" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="Palindrom (1)">
+        <java classname="javahackathon.Palindrom" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="Palindrom">
+        <java classname="Training.Palindrom" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="PalindromeNum">
+        <java classname="javahackathon.PalindromeNum" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="PalindromString">
+        <java classname="Training.PalindromString" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="parentchild">
+        <java classname="sample.parentchild" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="PascalsTriangle">
+        <java classname="Training.PascalsTriangle" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="PoiReadWrite">
+        <java classname="poiReadWrite.PoiReadWrite" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="PoiReadWrite1">
+        <java classname="poiReadWrite.PoiReadWrite1" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="PossibleSumOfCombinations">
+        <java classname="javahackathon.PossibleSumOfCombinations" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="PrimeNumber">
+        <java classname="Training.PrimeNumber" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="PrimeRange">
+        <java classname="Training.PrimeRange" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="PrintPattern">
+        <java classname="Training.PrintPattern" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="Program1">
+        <java classname="sample.Program1" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="Program10">
+        <java classname="sample.Program10" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="Program2">
+        <java classname="sample.Program2" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="Program3">
+        <java classname="sample.Program3" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="Program4">
+        <java classname="sample.Program4" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="Program5">
+        <java classname="sample.Program5" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="Program6">
+        <java classname="sample.Program6" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="Program7">
+        <java classname="sample.Program7" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="Program8">
+        <java classname="sample.Program8" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="Program9">
+        <java classname="sample.Program9" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="QuickSort (1)">
+        <java classname="javahackathon.QuickSort" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="QuickSort">
+        <java classname="Training.QuickSort" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="RadioCheckbox">
+        <java classname="sample.RadioCheckbox" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="RandomNum">
+        <java classname="Training.RandomNum" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="RemoveChar">
+        <java classname="javahackathon.RemoveChar" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="RepeatedIntStringNum">
+        <java classname="javahackathon.RepeatedIntStringNum" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="Reverse">
+        <java classname="Training.Reverse" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="ReverseCharInWord">
+        <java classname="javahackathon.ReverseCharInWord" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="ReverseWords">
+        <java classname="javahackathon.ReverseWords" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="salesforce">
+        <java classname="sample.salesforce" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="SalesForceBrowserInvocation">
+        <java classname="selenium.SalesForceBrowserInvocation" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="SalesForceLoginTestCase3">
+        <java classname="selenium.SalesForceLoginTestCase3" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="sample2">
+        <java classname="sample.sample2" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="SelectionSort">
+        <java classname="Training.SelectionSort" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="SimilarElementInArray">
+        <java classname="Training.SimilarElementInArray" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="StackExample">
+        <java classname="Training.StackExample" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="StringExamples">
+        <java classname="Training.StringExamples" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="StringToInteger">
+        <java classname="javahackathon.StringToInteger" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="StudentInfo">
+        <java classname="Training.StudentInfo" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="Sum">
+        <java classname="Training.Sum" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="SumOfEven">
+        <java classname="Training.SumOfEven" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="Swaping">
+        <java classname="Training.Swaping" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="SwitchCase">
+        <java classname="sample.SwitchCase" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="UniqueWords">
+        <java classname="javahackathon.UniqueWords" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="UserExceptionTest">
+        <java classname="Training.UserExceptionTest" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+    <target name="WriteTofile">
+        <java classname="Training.WriteTofile" failonerror="true" fork="yes">
+            <classpath refid="Introduction.classpath"/>
+        </java>
+    </target>
+</project>
